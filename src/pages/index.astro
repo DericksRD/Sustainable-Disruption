@@ -3,11 +3,33 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import H1 from '../components/H1.astro';
 import Main from '../components/Main.astro';
+import H2 from '../components/H2.astro';
 ---
 
 <Layout title="Sustainable Disruption">
 	<Main>
 		<H1 text="Embracing sustainability at its best." />
+		
+		<!-- En fondo blanco: -->
+		<p>
+			At Sustainable Disruption LLC, we beleive that using energy-efficient
+			and data-driven solutions to meeting the economic, societal, and 
+			environmentally growtn is critical now more than ever.
+		</p>
+
+		<H2 text="What we do"/>
+
+		<!-- <Card title='Bussiness managment'></Card>
+		<Card title='Renewable energy & energy efficiency'></Card>
+		<Card title='Transportation: electric mobility, alternative & accessible systems'></Card>
+		<Card title='Waste: recycling and final disposal'></Card>
+		<Card title='Forestry: certifications & tree planting'></Card>
+		<Card title='Green purchasing'></Card> -->
 	</Main>
 </Layout>
+<style>
+	p {
+		text-align: center;
+	}
+</style>
 
