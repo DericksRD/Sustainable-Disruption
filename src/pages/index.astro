@@ -1,35 +1,286 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import H1 from '../components/H1.astro';
-import Main from '../components/Main.astro';
-import H2 from '../components/H2.astro';
 ---
 
 <Layout title="Sustainable Disruption">
-	<Main>
-		<H1 text="Embracing sustainability at its best." />
-		
-		<!-- En fondo blanco: -->
-		<p>
-			At Sustainable Disruption LLC, we beleive that using energy-efficient
-			and data-driven solutions to meeting the economic, societal, and 
-			environmentally growtn is critical now more than ever.
-		</p>
+	<!-- <header>
+        <a href="#">
+            <img src="../public/images/SD LLC.png" alt="SD LLC Logo" style="width: 250px; height: 100px;">
+        </a>
+    </header> -->
+    <!-- End of header -->
+    
+    <header id="hero" class="parallax">
+        <a href="#">
+            <img src="../public/images/SD LLC.png" alt="SD LLC Logo" style="width: 250px; height: 100px;">
+        </a>
+        <div id="title-wrapper">
+            <h1>Embracing sustainability at its best</h1>
+        </div>
+    </header>
+    <!--End of Hero with H1 and panoramic image -->
+    
+    <main>
+        <p>
+            At Sustainable Disruption LLC, we believe that using energy-efficient and data-driven 
+            solutions to meeting the economic, societal, and environmentally growth its critical 
+            now more than ever. 
+        </p>
+    </main>
+    
+    <section>
+        <h2>What we do</h2>
+        <div id="card-wrapper">
+            <div class="card">
+                <div class="icon-container">
+                    <img src="../public/images/management.png" alt="bussiness management icon">
+                </div>
+                <h3>Bussiness managment</h3>
+                <ul>
+                    <li>Due diligence and compliance.</li>
+                    <li>Offering guide to switch to sustainable best practices and operations.</li>
+                    <li>Establishing and developing corporate social responsability & sustainability plans.</li>
+                    <li>Audit, analysis, and certification under ISO 14000.</li>
+                    <li>Carbon footprint analysis.</li>
+                    <li>Environmental impact assessment.</li>
+                    <li>Life Cycle Analysis (LCA)</li>
+                    <li>Environmental Product Declarations.</li>
+                    <li>Ecolabels.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="icon-container">
+                    <img src="../public/images/energia-renovable.png" alt="bussiness management icon">
+                </div>
+                <h3>Renewable energy & energy efficiency</h3>
+                <ul>
+                    <li>Solar panels; phtovoltaic modules.</li>
+                    <li>Energy  managment systems (EnMS).</li>
+                    <li>Smart Control Lighting.</li>
+                    <li>Thermostats and Occupancy Sensors</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="icon-container">
+                    <img src="../public/images/transportation.png" alt="bussiness management icon">
+                </div>
+                <h3>Transportation: electric mobility, alternative & accessible systems</h3>
+                <ul>
+                    <li>Compliance codes.</li>
+                    <li>Disabled parking.</li>
+                    <li>Bicycle racks.</li>
+                    <li>Solar panels; phtovoltaic modules for electric vehicles (EVs).</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="icon-container">
+                    <img src="../public/images/simbolo-de-reciclaje.png" alt="bussiness management icon">
+                </div>
+                <h3>Waste: recycling and final disposal</h3>
+                <ul>
+                    <li>Recycling for business.</li>
+                    <li>Recycling at home.</li>
+                    <li>Electronic waste (E-Waste)</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="icon-container">
+                    <img src="../public/images/arbol.png" alt="bussiness management icon">
+                </div>
+                <h3>Forestry: certification & tree planting</h3>
+                <ul>
+                    <li>
+                        Tree planting programs and cerftications in collaborations with
+                        local initiatives and the Forest Service.
+                    </li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="icon-container">
+                    <img src="../public/images/carrito-de-compras.png" alt="bussiness management icon">
+                </div>
+                <h3>Green purchasing</h3>
+                <ul>
+                    <li>Sustainable suppliers and vendors</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- End of Card Section -->
+    
+    <section class="clients">
+        <h2>Clients</h2>
+    </section>
+    <!-- End of clients section -->
 
-		<H2 text="What we do"/>
-
-		<!-- <Card title='Bussiness managment'></Card>
-		<Card title='Renewable energy & energy efficiency'></Card>
-		<Card title='Transportation: electric mobility, alternative & accessible systems'></Card>
-		<Card title='Waste: recycling and final disposal'></Card>
-		<Card title='Forestry: certifications & tree planting'></Card>
-		<Card title='Green purchasing'></Card> -->
-	</Main>
+    <footer>
+        <div class="footer-content">
+            <h4>Contact us</h4>
+            <p>sustainabledisruptionusa@gmail.com</p>
+            <p>+1 (305) 834-9753</p>
+        </div>
+        <div class="copyright">
+            <span>Copyright &copy; 2024. All Rights Reserved.</span>
+        </div>
+    </footer>
 </Layout>
 <style>
-	p {
+	* {
+		font-size: 1.6rem;
+		box-sizing: border-box;
+	}
+
+	/* Hero */
+	#hero {
+		background-image: url('../public/images/Panoramica.jpg');
+		height: 75vh;
+        /* parallax */
+        background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		/* Align h1 in the center */
+		display: flex;
+		flex-direction: column;
+		justify-content: center; 
+	}
+
+    #hero a {
+        position: absolute;
+        top: 2vw;
+        left: 5vw;
+    }
+
+    #title-wrapper {
+        /* justify-content: center;
+		align-items: center; */
+    }
+
+	.parallax {
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+	}
+
+	h1 {
+		color: #ffffff;
 		text-align: center;
+		font-size: 4rem;
+        margin: 0;
+        opacity: 0; /* Set initial opacity to 0 */
+        transform: translateY(20px); /* Move the div down initially */
+        animation: fadeInUp 1s ease-in-out forwards 0.2s; /* Apply the animation with a delay */
+	}
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+	/* Main */
+	main {
+		margin: 5rem;
+		text-align: center;
+	}
+
+
+	@media only screen and (max-width: 648px) {
+		main {
+			text-align: justify;
+		}
+	}
+
+	section {
+		margin: 5rem 3rem;
+	}
+
+	h2, h3{
+		color: #5AC184;
+		text-align: center;
+	}
+
+	h2 {
+		font-size: 3rem;
+	}
+
+
+	#card-wrapper {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
+		grid-gap: 1.5rem;
+	}
+
+	.card {
+		background-color: #f9f9f9;
+		padding: 2rem;
+		margin: 2rem;
+		border-radius: 0.8px;
+		box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+		height: 36rem;
+		overflow: scroll;
+	}
+
+	/* Style the scrollbar */
+	.card::-webkit-scrollbar {
+		width: 10px;
+	}
+
+	.card::-webkit-scrollbar-thumb {
+		background-color: #5AC184;
+		border-radius: 5px;
+	}
+
+	/* Hide the scrollbar by default and show on hover */
+	.card::-webkit-scrollbar-thumb {
+		visibility: hidden;
+	}
+
+	.card:hover::-webkit-scrollbar-thumb {
+		visibility: visible;
+	}
+
+	.icon-container {
+		width: 8rem;
+		height: 8rem;
+		margin: 0 auto;
+	}
+
+	.icon-container img {
+		width: 100%;
+	}
+
+	.card ul li {
+		margin: 1.2rem 0;
+		/* list-style: none; */
+	}
+
+	/* Footer */
+	footer {
+		background-color: #313432;
+		width: 100%;
+	}
+
+	h4 {
+		color: #5AC184;
+	}
+
+	.footer-content {
+		padding: 2rem 5rem;
+		color: #ffffff
+
+	}
+
+	.copyright {
+		text-align: center;
+		background-color: #1F2120;
+		width: 100%;
+		padding: 1.5rem 0;
+	}
+
+	.copyright span {
+		color: #666666;
+		font-size: 1.8rem
 	}
 </style>
 
