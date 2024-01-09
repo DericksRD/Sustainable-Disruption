@@ -2,24 +2,20 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Sustainable Disruption">
-	<!-- <header>
-        <a href="#">
-            <img src="../public/images/SD LLC.png" alt="SD LLC Logo" style="width: 250px; height: 100px;">
-        </a>
-    </header> -->
-    <!-- End of header -->
-    
+<Layout title="Sustainable Disruption">  
     <header id="hero" class="parallax">
         <a href="#">
             <img src="../public/images/SD LLC.png" alt="SD LLC Logo" style="width: 250px; height: 100px;">
         </a>
-        <div id="title-wrapper">
+        <!-- <div id="title-wrapper">
             <h1>Embracing sustainability at its best</h1>
-        </div>
+        </div> -->
     </header>
+    <!-- End of header -->
     <!--End of Hero with H1 and panoramic image -->
-    
+    <div id="title-wrapper">
+        <h1>Embracing sustainability at its best</h1>
+    </div>
     <main>
         <p>
             At Sustainable Disruption LLC, we believe that using energy-efficient and data-driven 
@@ -110,14 +106,35 @@ import Layout from '../layouts/Layout.astro';
     
     <section class="clients">
         <h2>Clients</h2>
+        <div class="clients-wrapper">
+            <div class="grid-item"><img src="../public/images/SD LLC.png" alt="Image 1" width="300rem"> </div>
+            <div class="grid-item"><img src="../public/images/SD LLC.png" alt="Image 2" width="300rem"> </div>
+            <div class="grid-item"><img src="../public/images/SD LLC.png" alt="Image 3" width="300rem"> </div>
+            <div class="grid-item"><img src="../public/images/SD LLC.png" alt="Image 4" width="300rem"> </div>
+            <div class="grid-item"><img src="../public/images/SD LLC.png" alt="Image 5" width="300rem"> </div>
+            <div class="grid-item"><img src="../public/images/SD LLC.png" alt="Image 6" width="300rem"> </div>
+            <div class="grid-item"><img src="../public/images/SD LLC.png" alt="Image 7" width="300rem"> </div>
+            <div class="grid-item"><img src="../public/images/SD LLC.png" alt="Image 8" width="300rem"> </div>
+            <div class="grid-item"><img src="../public/images/SD LLC.png" alt="Image 9" width="300rem"> </div>
+            <div class="grid-item"><img src="../public/images/SD LLC.png" alt="Image 10" width="300rem"></div>
+            <div class="grid-item"><img src="../public/images/SD LLC.png" alt="Image 11" width="300rem"></div>
+            <div class="grid-item"><img src="../public/images/SD LLC.png" alt="Image 12" width="300rem"></div>
+        </div>
     </section>
     <!-- End of clients section -->
 
     <footer>
-        <div class="footer-content">
-            <h4>Contact us</h4>
-            <p>sustainabledisruptionusa@gmail.com</p>
-            <p>+1 (305) 834-9753</p>
+        <div id="footer-flex">
+            <div class="logo-wrapper">
+                <a href="#">
+                    <img src="../public/images/SD LLC.png" alt="SD LLC Logo" style="width: 250px; height: 100px;">
+                </a>
+            </div>
+            <div class="footer-content">
+                <h2>Contact us</h2>
+                <p>sustainabledisruptionusa@gmail.com</p>
+                <p>+1 (305) 834-9753</p>
+            </div>
         </div>
         <div class="copyright">
             <span>Copyright &copy; 2024. All Rights Reserved.</span>
@@ -133,7 +150,7 @@ import Layout from '../layouts/Layout.astro';
 	/* Hero */
 	#hero {
 		background-image: url('../public/images/Panoramica.jpg');
-		height: 75vh;
+		height: 80vh;
         /* parallax */
         background-size: cover;
 		background-position: center;
@@ -146,13 +163,20 @@ import Layout from '../layouts/Layout.astro';
 
     #hero a {
         position: absolute;
-        top: 2vw;
-        left: 5vw;
+        top: 0;
+        width: 100%;
+        background-color: #313432;
+        opacity: 65%;
+    }
+
+    #hero a img {
+        margin: 2rem 0 2rem 5rem;
     }
 
     #title-wrapper {
-        /* justify-content: center;
-		align-items: center; */
+        padding: 2rem 0;
+        margin-top: 2rem;
+        /* background-color: #666666; */
     }
 
 	.parallax {
@@ -162,7 +186,8 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	h1 {
-		color: #ffffff;
+		color: #188904;
+        font-weight: bold;
 		text-align: center;
 		font-size: 4rem;
         margin: 0;
@@ -202,6 +227,7 @@ import Layout from '../layouts/Layout.astro';
 
 	h2 {
 		font-size: 3rem;
+        margin-bottom: 3rem;
 	}
 
 
@@ -255,32 +281,89 @@ import Layout from '../layouts/Layout.astro';
 		/* list-style: none; */
 	}
 
+    .clients-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+        column-gap: 1.5rem;
+        row-gap: 5rem;
+        text-align: center;
+    }
+
 	/* Footer */
 	footer {
 		background-color: #313432;
 		width: 100%;
 	}
 
+    .logo-wrapper {
+        width: 50%;
+        min-width: 25rem;
+        height: 10rem;
+        margin:  auto;
+        position: relative;
+        display: inline-flex;
+    }
+
+    .logo-wrapper img {
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
 	h4 {
 		color: #5AC184;
 	}
 
+    #footer-flex {
+        display: flex;
+        max-width: 60%;
+        padding-top: 8rem;
+    }
+
 	.footer-content {
 		padding: 2rem 5rem;
 		color: #ffffff
-
 	}
+
+    .footer-content h2 {
+        text-align: left;
+    }
 
 	.copyright {
 		text-align: center;
 		background-color: #1F2120;
 		width: 100%;
 		padding: 1.5rem 0;
+        margin-top: 10rem;
 	}
 
 	.copyright span {
 		color: #666666;
 		font-size: 1.8rem
 	}
+
+    @media only screen and (max-width: 750px) {
+        .clients-wrapper div {
+            width: 40%;
+            margin: 0 auto;
+        }
+        
+        .logo-wrapper{
+            text-align: center;
+            width: 30%;
+        }
+
+        .logo-wrapper  img {
+            margin-top: 3rem;
+        }
+
+        #footer-flex {
+            max-width: 100%;
+            flex-direction: column;
+            row-gap: 5rem;
+            align-items: center;
+        }
+    }
 </style>
 
