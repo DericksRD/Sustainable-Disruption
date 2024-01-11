@@ -33,8 +33,17 @@ const {
 
 <style>
 	html {
-    font-size: 62.5%; /*1rem -> 10px*/
-    font-family: 'Arial', sans-serif; 
+		font-size: 62.5%; /*1rem -> 10px*/
+		font-family: 'Arial', sans-serif; 
+
+		scroll-behavior: smooth;
+	}
+
+	/* Disable smooth scrolling if the user has requested to minimize motion-based animations. */
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
 	}
 
 	body {

@@ -3,19 +3,26 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Sustainable Disruption">  
-    <header id="hero" class="parallax">
-        <a href="#">
-            <img src="../public/images/SD LLC.png" alt="SD LLC Logo" style="width: 250px; height: 100px;">
-        </a>
-        <!-- <div id="title-wrapper">
-            <h1>Embracing sustainability at its best</h1>
-        </div> -->
-    </header>
-    <!-- End of header -->
-    <!--End of Hero with H1 and panoramic image -->
-    <div id="title-wrapper">
-        <h1>Embracing sustainability at its best</h1>
+    <div id="hero" class="parallax">
+        <header>
+            <a href="/" id="logo">
+                <img src="../public/images/SD LLC.png" alt="SD LLC Logo" style="width: 250px; height: 100px;">
+            </a>
+            <nav>
+                <li><a href="#about-us">About us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#clients">Clients</a></li>
+                <li><a href="#contact-us">Contact us</a></li>
+            </nav>
+        </header>
     </div>
+    <!-- End of header -->
+
+    <div id="title-wrapper">
+        <h1 id="about-us">Embracing sustainability at its best</h1>
+    </div>
+    <!--End of h1 -->
+
     <main>
         <p>
             At Sustainable Disruption LLC, we believe that using energy-efficient and data-driven 
@@ -25,7 +32,7 @@ import Layout from '../layouts/Layout.astro';
     </main>
     
     <section>
-        <h2>What we do</h2>
+        <h2 id="services">What we do</h2>
         <div id="card-wrapper">
             <div class="card">
                 <div class="icon-container">
@@ -105,7 +112,7 @@ import Layout from '../layouts/Layout.astro';
     <!-- End of Card Section -->
     
     <section class="clients">
-        <h2>Clients</h2>
+        <h2 id="clients">Clients</h2>
         <div class="clients-wrapper">
             <div class="grid-item"><img src="../public/images/SD LLC.png" alt="Image 1" width="300rem"> </div>
             <div class="grid-item"><img src="../public/images/SD LLC.png" alt="Image 2" width="300rem"> </div>
@@ -123,7 +130,7 @@ import Layout from '../layouts/Layout.astro';
     </section>
     <!-- End of clients section -->
 
-    <footer>
+    <footer id="contact-us">
         <div id="footer-flex">
             <div class="logo-wrapper">
                 <a href="#">
@@ -153,37 +160,75 @@ import Layout from '../layouts/Layout.astro';
 		height: 80vh;
         /* parallax */
         background-size: cover;
-		background-position: center;
+		background-position: 15%;
 		background-attachment: fixed;
-		/* Align h1 in the center */
-		display: flex;
-		flex-direction: column;
-		justify-content: center; 
 	}
+    
+    .parallax {
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
 
-    #hero a {
-        position: absolute;
-        top: 0;
+    header {
         width: 100%;
+        height: 20%;
+        display: flex;
+		justify-content: space-around; 
+        align-items: center;
         background-color: #313432;
         opacity: 65%;
     }
 
-    #hero a img {
+    @media only screen and (max-width: 648px) {
+        #hero {
+            background-position: 30%;
+        }
+        
+        header {
+            flex-direction: column;
+            height: 30%;
+        }
+    }
+
+    #logo {
+        width: 50%;
+    }
+    
+    #logo img {
+        object-fit: contain;
         margin: 2rem 0 2rem 5rem;
     }
+
+    nav {
+        height: 100%;
+        list-style: none;
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    nav li {
+        color: #fff;
+    }
+
+    nav li a {
+        font-size: 2rem;
+    }
+
+    nav li a:hover {
+        text-decoration: underline;
+    }
+
+    /* nav li:hover {
+        text-decoration: underline;
+    } */
 
     #title-wrapper {
         padding: 2rem 0;
         margin-top: 2rem;
-        /* background-color: #666666; */
     }
 
-	.parallax {
-		background-size: cover;
-		background-position: center;
-		background-attachment: fixed;
-	}
 
 	h1 {
 		color: #188904;
@@ -205,7 +250,8 @@ import Layout from '../layouts/Layout.astro';
 
 	/* Main */
 	main {
-		margin: 5rem;
+		margin: 5rem auto;
+        width: 70%;
 		text-align: center;
 	}
 
@@ -215,6 +261,10 @@ import Layout from '../layouts/Layout.astro';
 			text-align: justify;
 		}
 	}
+
+    main p {
+        font-size: 2rem;
+    }
 
 	section {
 		margin: 5rem 3rem;
