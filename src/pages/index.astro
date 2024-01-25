@@ -149,11 +149,6 @@ import Layout from '../layouts/Layout.astro';
     </footer>
 </Layout>
 <style>
-	* {
-		font-size: 1.6rem;
-		box-sizing: border-box;
-	}
-
 	/* Hero */
 	#hero {
 		background-image: url('/Panoramica.jpg');
@@ -163,6 +158,12 @@ import Layout from '../layouts/Layout.astro';
 		background-position: 15%;
 		background-attachment: fixed;
 	}
+
+    @media only screen and (max-width: 500px;) {
+        #hero {
+            width: 100%;
+        }
+    }
     
     .parallax {
         background-size: cover;
