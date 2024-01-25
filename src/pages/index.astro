@@ -190,17 +190,24 @@ import Layout from '../layouts/Layout.astro';
             flex-direction: column;
             height: 30%;
         }
+        
     }
 
     #logo {
         width: 50%;
     }
-    
+
     #logo img {
         object-fit: contain;
         margin: 2rem 0 2rem 5rem;
     }
 
+    @media only screen and (max-width: 500px) {
+        #logo img{
+            margin: 0 auto;
+        }
+    }
+    
     nav {
         height: 100%;
         list-style: none;
@@ -298,6 +305,19 @@ import Layout from '../layouts/Layout.astro';
 		overflow: scroll;
 	}
 
+    @media only screen and (max-width: 500px) {
+        section {
+            margin: 1rem;
+        }
+    }
+
+    @media only screen and (max-width: 380px) {
+        .card {
+            margin: 2rem 1rem;
+            max-width: 32rem;
+        }
+    }
+
 	/* Style the scrollbar */
 	.card::-webkit-scrollbar {
 		width: 10px;
@@ -329,7 +349,6 @@ import Layout from '../layouts/Layout.astro';
 
 	.card ul li {
 		margin: 1.2rem 0;
-		/* list-style: none; */
 	}
 
     .clients-wrapper {
@@ -379,6 +398,16 @@ import Layout from '../layouts/Layout.astro';
 
     .footer-content h2 {
         text-align: left;
+    }
+
+    @media only screen and (max-width: 500px) {
+        .footer-content {
+            text-align: center;
+        }
+
+        .footer-content h2 {
+            text-align: center;
+        }
     }
 
 	.copyright {
