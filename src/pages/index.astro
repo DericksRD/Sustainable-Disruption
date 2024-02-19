@@ -140,7 +140,6 @@ import Layout from '../layouts/Layout.astro';
             <div class="footer-content">
                 <h2>Contact us</h2>
                 <p>sustainabledisruptionusa@gmail.com</p>
-                <p>+1 (305) 834-9753</p>
             </div>
         </div>
         <div class="copyright">
@@ -151,17 +150,13 @@ import Layout from '../layouts/Layout.astro';
 <style>
 	/* Hero */
 	#hero {
-		background-image: url('/Panoramica.jpg');
+        background-image: url('public/daniele-la-rosa-messina-OiPtLN9_04w-unsplash.jpg');
 		height: 80vh;
-        /* parallax */
-        background-size: cover;
-		background-position: 15%;
-		background-attachment: fixed;
 	}
     
     .parallax {
         background-size: cover;
-        background-position: center;
+        background-position: top;
         background-attachment: fixed;
     }
 
@@ -177,7 +172,7 @@ import Layout from '../layouts/Layout.astro';
 
     @media only screen and (max-width: 648px) {
         #hero {
-            background-position: 30%;
+            background-position: 85%;
         }
         
         header {
